@@ -9,3 +9,11 @@ Feature: Calculator
     | 1     | 12     | 13     |
     | -1    | 6      | 5      |
     | 2     | 2      | 4      |
+  Scenario Outline: add two numbers
+    Given part2 Two inputs, <input> and <opt>
+    When part2 I do the operation
+    Then part2 I expect the result <result>
+  Examples:
+    | input | opt | result |
+    | 1     | rvs      | 1      |
+    | 4     | sqr      | 2      |
