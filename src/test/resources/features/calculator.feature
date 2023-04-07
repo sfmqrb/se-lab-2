@@ -15,5 +15,7 @@ Feature: Calculator
     Then part2 I expect the result <result>
   Examples:
     | input | opt | result |
-    | 1     | rvs      | 1      |
+    | 4     | rvs      | 0.25   |
+    | 5     | rvs      | 0.2    |
     | 4     | sqr      | 2      |
+    | 5     | sqr      | 2.236  |
