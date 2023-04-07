@@ -14,8 +14,10 @@ Feature: Calculator
     When part2 I do the operation
     Then part2 I expect the result <result>
   Examples:
-    | input | opt | result |
+    | input | opt      | result |
     | 4     | rvs      | 0.25   |
     | 5     | rvs      | 0.2    |
     | 4     | sqr      | 2      |
     | 5     | sqr      | 2.236  |
+    | 0     | sqr      | 0      |
+    | -2    | rvs      | -0.5   |

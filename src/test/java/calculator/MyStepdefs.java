@@ -17,7 +17,7 @@ public class MyStepdefs {
     public void before() {
         calculator = new Calculator();
     }
-    @Given("^Two input values, (-{0,1}(?!0)\\d+) and (-{0,1}(?!0)\\d+)$")
+    @Given("^Two input values, (-{0,1}\\d+) and (-{0,1}\\d+)$")
     public void twoInputValuesAnd(int arg0, int arg1) {
         value1 = arg0;
         value2 = arg1;
@@ -35,7 +35,7 @@ public class MyStepdefs {
 
     // *************************************************************************
 
-    @Given("^part2 Two inputs, (-{0,1}(?!0)\\d+) and (rvs|sqr)$")
+    @Given("^part2 Two inputs, (-{0,1}\\d+) and (rvs|sqr)$")
     public void part2TwoInputValuesAnd(int arg0, String arg1) {
         part2_value1 = arg0;
         part2_value2 = arg1;
@@ -48,9 +48,8 @@ public class MyStepdefs {
             throw new RuntimeException(e);
         }
     }
-    @Then("^part2 I expect the result (.+)$")
+    @Then("^part2 I expect the result (-{0,1}\\d+\\.\\d*|\\d+)$")
     public void Part2IExpectTheResult(double arg0) {
-        System.out.println(arg0);
         Assert.assertEquals(arg0, part2_result, 0.0001);
     }
 }
