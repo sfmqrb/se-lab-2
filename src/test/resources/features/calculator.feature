@@ -9,6 +9,7 @@ Feature: Calculator
     | 1     | 12     | 13     |
     | -1    | 6      | 5      |
     | 2     | 2      | 4      |
+    | 0     | 0      | 0      |
   Scenario Outline: add two numbers
     Given part2 Two inputs, <input> and <opt>
     When part2 I do the operation
