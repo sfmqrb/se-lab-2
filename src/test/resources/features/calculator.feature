@@ -10,7 +10,15 @@ Feature: Calculator
     | -1    | 6      | 5      |
     | 2     | 2      | 4      |
     | 0     | 0      | 0      |
-  Scenario Outline: add two numbers
+  Scenario: simple operation
+    Given part2 Two inputs, 2 and rvs
+    When part2 I do the operation
+    Then part2 I expect the result 0.5
+  Scenario: simple operation
+    Given part2 Two inputs, 9 and sqr
+    When part2 I do the operation
+    Then part2 I expect the result 3.0
+  Scenario Outline: simple operation
     Given part2 Two inputs, <input> and <opt>
     When part2 I do the operation
     Then part2 I expect the result <result>
